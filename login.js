@@ -8,7 +8,6 @@ loginBtn.addEventListener('click',function(){
     const mobileNumber=inputNumber.value;
     const pin=inputPassword.value;
     if(mobileNumber=="01712345678"&&pin=="1234"){
-        alert('login successful');
         window.location.assign('home.html')
     }
     else{
