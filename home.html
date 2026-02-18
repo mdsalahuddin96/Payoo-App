@@ -21,7 +21,7 @@
     </style>
 </head>
 <body class="min-h-screen max-w-md mx-auto bg-base-200">
-    <header class="border-b-1 border-gray-200">
+    <header class="border-b-1 border-gray-200 sticky top-0 bg-base-200 z-50">
         <section class="flex justify-between items-center w-11/12 mx-auto p-3">
             <div class="left flex gap-1">
                 <div class="logo w-[60px]">
@@ -47,7 +47,7 @@
                 <img src="./assets/opt-1.png">
                 <p>Add Money</p>
             </button>
-            <button class="btn btn-primary btn-soft flex-col py-9 rounded-md">
+            <button id="cashout-btn" class="btn btn-primary btn-soft flex-col py-9 rounded-md">
                 <img src="./assets/opt-2.png">
                 <p>Cashout</p>
             </button>
@@ -69,6 +69,23 @@
             </button>
         </div>
     </section>
-    <script src="login.js"></script>
+    <section id="widthdraw-section" class="w-11/12 mx-auto">
+        <h1 class="text-2xl font-bold mt-5">Cash Out</h1>
+        <div class="form">
+            <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4 mx-auto">
+                <label class="label text-neutral font-bold">Agent Number</label>
+                <input id="cashout-number-input" type="text" class="input bg-base-200 rounded-full w-full" maxlength="11" minlength="11" value="01712345678" placeholder="Enter your 11 digit number" />
+                <br>
+                <label class="label text-neutral font-bold">Amount</label>
+                <input id="cashout-amount-input" type="number" class="input bg-base-200 rounded-full w-full" placeholder="Enter Amount" />
+                <br>
+                <label class="label text-neutral font-bold">Pin Number</label>
+                <input id="cashout-password-input" type="password" class="input bg-base-200 rounded-full w-full" maxlength="4" placeholder="Enter 4 Digit Pin" />
+                <button id="withdraw-btn" class="btn btn-neutral mt-4 bg-primary rounded-full border-none">Withdraw Money</button>
+            </fieldset>     
+        </div>
+    </section>
+    <script src="./machine.js"></script>
+    <script src="cashout.js"></script>
 </body>
 </html>
