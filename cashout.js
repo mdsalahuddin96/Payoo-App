@@ -20,6 +20,7 @@ document.getElementById('withdraw-btn').addEventListener('click',function(){
         return
     }
     else{
+        alert('Cashout Successful');
         setBalanceValue(newBalance);
     }
 })

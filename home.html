@@ -69,8 +69,32 @@
             </button>
         </div>
     </section>
-    <section id="widthdraw-section" class="w-11/12 mx-auto">
-        <h1 class="text-2xl font-bold mt-5">Cash Out</h1>
+    <section id="add-money-section" class="w-11/12 mx-auto py-5">
+        <h1 class="text-2xl font-bold mb-5">Add Money</h1>
+        <div class="form">
+            <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4 mx-auto">
+                <label class="label text-neutral font-bold">Select A Bank</label>
+                <select id="select-bank" class="select bg-base-200 rounded-full w-full">
+                    <option disabled selected>Select A Bank</option>
+                    <option value="DDBL">DDBL</option>
+                    <option value="IBBL">IBBL</option>
+                    <option value="city bank">City Bank</option>
+                </select>  
+                <br>              
+                <label class="label text-neutral font-bold">Bank Account Number</label>
+                <input id="add-money-number-input" type="text" class="input bg-base-200 rounded-full w-full" maxlength="11" minlength="11" value="01712345678" placeholder="Enter 11 digit account number" />
+                <br>
+                <label class="label text-neutral font-bold">Amount to Add</label>
+                <input id="add-money-amount-input" type="number" class="input bg-base-200 rounded-full w-full" placeholder="Add Amount to withdraw" />
+                <br>
+                <label class="label text-neutral font-bold">Pin Number</label>
+                <input id="add-money-password-input" type="password" class="input bg-base-200 rounded-full w-full" maxlength="4" placeholder="Enter 4 Digit Pin Number" />
+                <button id="add-money-btn" class="btn btn-neutral mt-4 bg-primary rounded-full border-none">Add Money</button>
+            </fieldset>     
+        </div>
+    </section>
+    <section id="widthdraw-section" class="w-11/12 mx-auto py-5 hidden">
+        <h1 class="text-2xl font-bold mb-5">Cash Out</h1>
         <div class="form">
             <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4 mx-auto">
                 <label class="label text-neutral font-bold">Agent Number</label>
@@ -85,6 +109,7 @@
             </fieldset>     
         </div>
     </section>
+    <script src="./addmoney.js"></script>
     <script src="./machine.js"></script>
     <script src="cashout.js"></script>
 </body>
