@@ -37,17 +37,19 @@
             </div>
         </section>
     </header>
+
+    <!-- Features Section -->
     <section class="w-11/12 mx-auto">
         <div class="welcome py-8 space-y-2">
             <h1 class="text-2xl text-neutral font-bold">Welcome to Pay<span class="text-[#7460FF]">oo</span></h1>
             <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
         </div>
         <div class="button grid grid-cols-3 gap-3">
-            <button class="btn btn-primary btn-soft flex-col py-9 rounded-md">
+            <button onclick="showOnly('add-money-section')" class="btn btn-primary btn-soft flex-col py-9 rounded-md" autofocus>
                 <img src="./assets/opt-1.png">
                 <p>Add Money</p>
             </button>
-            <button id="cashout-btn" class="btn btn-primary btn-soft flex-col py-9 rounded-md">
+            <button onclick="showOnly('widthdraw-section')"  id="cashout-btn" class="btn btn-primary btn-soft flex-col py-9 rounded-md">
                 <img src="./assets/opt-2.png">
                 <p>Cashout</p>
             </button>
@@ -63,13 +65,15 @@
                 <img src="./assets/opt-5.png">
                 <p>Pay Bill</p>
             </button>
-            <button class="btn btn-primary btn-soft flex-col py-9 rounded-md">
+            <button onclick="showOnly('transaction-section')" class="btn btn-primary btn-soft flex-col py-9 rounded-md">
                 <img src="./assets/opt-6.png">
                 <p>Transactions</p>
             </button>
         </div>
     </section>
-    <section id="add-money-section" class="w-11/12 mx-auto py-5">
+
+    <!-- Add Money Section -->
+    <section id="add-money-section" class="w-11/12 mx-auto py-5 ">
         <h1 class="text-2xl font-bold mb-5">Add Money</h1>
         <div class="form">
             <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4 mx-auto">
@@ -93,6 +97,8 @@
             </fieldset>     
         </div>
     </section>
+
+    <!-- Withdraw Section -->
     <section id="widthdraw-section" class="w-11/12 mx-auto py-5 hidden">
         <h1 class="text-2xl font-bold mb-5">Cash Out</h1>
         <div class="form">
@@ -108,9 +114,26 @@
                 <button id="withdraw-btn" class="btn btn-neutral mt-4 bg-primary rounded-full border-none">Withdraw Money</button>
             </fieldset>     
         </div>
+    </section> 
+
+    <!-- Transaction section -->
+    <section id="transaction-section" class="w-11/12 mx-auto py-5 hidden">
+        <div class="transaction-header flex justify-between">
+             <h1 class="text-2xl font-bold mb-5">Transaction History</h1>
+            <div>
+                <button class="btn btn-link cursor-pointer text-neutral/50 p-0">View All</button>
+            </div>
+        </div>
+
+       <!-- Transaction card container -->
+        <div id="transaction-container" class="mx-auto space-y-5">
+
+            <!-- Transaction card -->
+            
+        </div>
     </section>
-    <script src="./addmoney.js"></script>
     <script src="./machine.js"></script>
+    <script src="./addmoney.js"></script>
     <script src="cashout.js"></script>
 </body>
 </html>
