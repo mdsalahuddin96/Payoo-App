@@ -116,7 +116,24 @@
         </div>
     </section> 
 
-<!-- Pay Bill Section -->
+    <!-- Transfer Money Section -->
+     <section id="widthdraw-section" class="w-11/12 mx-auto py-5">
+        <h1 class="text-2xl font-bold mb-5">Transfer Money</h1>
+        <div class="form">
+            <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4 mx-auto">
+                <label class="label text-neutral font-bold">User Account Number</label>
+                <input id="transfer-number-input" type="text" class="input bg-base-200 rounded-full w-full" maxlength="11" minlength="11" value="01712345678" placeholder="Enter your 11 digit number" />
+                <br>
+                <label class="label text-neutral font-bold">Amount</label>
+                <input id="transfer-amount-input" type="number" class="input bg-base-200 rounded-full w-full" placeholder="Enter Amount" />
+                <br>
+                <label class="label text-neutral font-bold">Pin Number</label>
+                <input id="transfer-password-input" type="password" class="input bg-base-200 rounded-full w-full" maxlength="4" placeholder="Enter 4 Digit Pin" />
+                <button id="send-now-btn" class="btn btn-neutral mt-4 bg-primary rounded-full border-none">Send Now</button>
+            </fieldset>     
+        </div>
+    </section> 
+    <!-- Pay Bill Section -->
     <section id="pay-bill-section" class="w-11/12 mx-auto py-5  hidden">
         <h1 class="text-2xl font-bold mb-5">Pay Bill</h1>
         <div class="form">
