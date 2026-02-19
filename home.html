@@ -61,7 +61,7 @@
                 <img src="./assets/opt-4.png">
                 <p>Get Bonus</p>
             </button>
-            <button class="btn btn-primary btn-soft flex-col py-9 rounded-md">
+            <button onclick="showOnly('pay-bill-section')" class="btn btn-primary btn-soft flex-col py-9 rounded-md">
                 <img src="./assets/opt-5.png">
                 <p>Pay Bill</p>
             </button>
@@ -89,7 +89,7 @@
                 <input id="add-money-number-input" type="text" class="input bg-base-200 rounded-full w-full" maxlength="11" minlength="11" value="01712345678" placeholder="Enter 11 digit account number" />
                 <br>
                 <label class="label text-neutral font-bold">Amount to Add</label>
-                <input id="add-money-amount-input" type="number" class="input bg-base-200 rounded-full w-full" placeholder="Add Amount to withdraw" />
+                <input id="add-money-amount-input" type="number" class="input bg-base-200 rounded-full w-full" placeholder="Enter Amount to Add" />
                 <br>
                 <label class="label text-neutral font-bold">Pin Number</label>
                 <input id="add-money-password-input" type="password" class="input bg-base-200 rounded-full w-full" maxlength="4" placeholder="Enter 4 Digit Pin Number" />
@@ -116,6 +116,32 @@
         </div>
     </section> 
 
+<!-- Pay Bill Section -->
+    <section id="pay-bill-section" class="w-11/12 mx-auto py-5  hidden">
+        <h1 class="text-2xl font-bold mb-5">Pay Bill</h1>
+        <div class="form">
+            <fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4 mx-auto">
+                <label class="label text-neutral font-bold">Select To Pay</label>
+                <select id="select-bill" class="select bg-base-200 rounded-full w-full">
+                    <option disabled selected>Select Bill</option>
+                    <option value="Electricity Bill">Electricity Bill</option>
+                    <option value="Water Bill">Water Bill</option>
+                    <option value="Gas Bill">Gas Bill</option>
+                </select>  
+                <br>              
+                <label class="label text-neutral font-bold">Biller Account Number</label>
+                <input id="pay-bill-number-input" type="text" class="input bg-base-200 rounded-full w-full" value="01712345678" placeholder="Enter account number" />
+                <br>
+                <label class="label text-neutral font-bold">Amount to Pay</label>
+                <input id="pay-bill-amount-input" type="number" class="input bg-base-200 rounded-full w-full" placeholder="Add Amount to pay" />
+                <br>
+                <label class="label text-neutral font-bold">Pin Number</label>
+                <input id="pay-bill-password-input" type="password" class="input bg-base-200 rounded-full w-full" maxlength="4" placeholder="Enter 4 Digit Pin Number" />
+                <button id="pay-now-btn" class="btn btn-neutral mt-4 bg-primary rounded-full border-none">Pay Now</button>
+            </fieldset>     
+        </div>
+    </section>
+
     <!-- Transaction section -->
     <section id="transaction-section" class="w-11/12 mx-auto py-5 hidden">
         <div class="transaction-header flex justify-between">
@@ -134,6 +160,7 @@
     </section>
     <script src="./machine.js"></script>
     <script src="./addmoney.js"></script>
+    <script src="./paybill.js"></script>
     <script src="cashout.js"></script>
 </body>
 </html>
